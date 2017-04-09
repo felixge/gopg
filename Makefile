@@ -3,14 +3,23 @@ INITDB = initdb
 PG_CTL = pg_ctl
 PG_LOG = $(PGDATA)/log.log
 PG_CTL_D = $(PG_CTL) -D "$(PGDATA)"
+PGPORT = 9998
+PGDB = postgres
 
 .PHONY: ci
-ci: clean init start stop
+ci: clean init start test stop
+
+.PHONY: test
+test:
+	PGDATA="$(PGDATA)" \
+	 PGPORT="$(PGPORT)" \
+	 PGDB="$(PGDB)" \
+	 go test -v .
 
 .PHONY: init
 init:
 	$(INITDB) $(PGDATA)
-	echo "port = 9998" >> "$(PGDATA)/postgresql.conf"
+	echo "port = $(PGPORT)" >> "$(PGDATA)/postgresql.conf"
 
 .PHONY: start
 start:
