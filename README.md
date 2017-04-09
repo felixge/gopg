@@ -8,8 +8,8 @@ re-implementing parts of it as a Go library.
 ## What's Implemented
 
 Given a postgres data directory, a database `oid` and a table `relfilenode`
-it's possible to read all heap pages, and follow their item identifiers, as
-well as heap tuple headers and get the raw tuple data.
+it's possible to read all heap pages, and follow their item identifiers, and
+read their tuple headers and raw tuple data.
 
 You can see this in action in the `example_test.go` file.
 
