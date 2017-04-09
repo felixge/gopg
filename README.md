@@ -38,18 +38,18 @@ $ make
 # will not impact your system install ...
 === RUN   TestExample
 page 0:
-  header: {LSN:0 Checksum:0 Flags:0 Lower:36 Upper:8096 Special:8192 PageSizeVersion:8196 PruneXid:0}:
+  header: {LSN:0 Checksum:0 Flags:0 Lower:36 Upper:8072 Special:8192 PageSizeVersion:8196 PruneXid:0}:
   tuple 1
-    item identifier: {Offset:8160 Flags:1 Len:28}
-    tuple header: {XMin:884 XMax:0 Field3:4 CTID:[0 0 0 0 1 0] Infomask2:1 Infomask:2048 Offset:24}
-    data: 01000000
+    item identifier: {Offset:8152 Flags:1 Len:35}
+    tuple header: {XMin:894 XMax:0 Field3:11 CTID:[0 0 0 0 1 0] Infomask2:2 Infomask:2050 Offset:24}
+    data: 010000000f6974656d2d31
   tuple 2
-    item identifier: {Offset:8128 Flags:1 Len:28}
-    tuple header: {XMin:884 XMax:0 Field3:4 CTID:[0 0 0 0 2 0] Infomask2:1 Infomask:2048 Offset:24}
-    data: 02000000
+    item identifier: {Offset:8112 Flags:1 Len:35}
+    tuple header: {XMin:894 XMax:0 Field3:11 CTID:[0 0 0 0 2 0] Infomask2:2 Infomask:2050 Offset:24}
+    data: 020000000f6974656d2d32
   tuple 3
-    item identifier: {Offset:8096 Flags:1 Len:28}
-    tuple header: {XMin:884 XMax:0 Field3:4 CTID:[0 0 0 0 3 0] Infomask2:1 Infomask:2048 Offset:24}
-    data: 03000000
---- PASS: TestExample (1.02s)
+    item identifier: {Offset:8072 Flags:1 Len:35}
+    tuple header: {XMin:894 XMax:0 Field3:11 CTID:[0 0 0 0 3 0] Infomask2:2 Infomask:2050 Offset:24}
+    data: 030000000f6974656d2d33
+--- PASS: TestExample (0.01s)
 ```
