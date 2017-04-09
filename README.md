@@ -1,7 +1,7 @@
 # gopg
 
-This is a toy project for verifying my understanding of how [postgres stores
-data on
+This is a toy project for improving my understanding of how [postgres stores
+and accesses data on
 disk](https://www.postgresql.org/docs/9.6/static/storage-page-layout.html) by
 re-implementing parts of it as a Go library.
 
@@ -29,13 +29,15 @@ able to do anything useful with this library anytime soon.
 
 ## Run it yourself
 
-Clone the project, make sure you have postgres installed (`initdb` and `pg_ctl`
-should be in your PATH), then simply type `make`:
+Assuming you have postgres installed (`initdb` and `pg_ctl` should be in your
+PATH), it's super easy to run this code locally.
+
+Just clone this project, type `make`, and you should see some output like this:
 
 ```
 $ make
 # Lots of output related to initializing a standalone postgres instance. This
-# will not impact your system install ...
+# is completely harmless and will not impact your main postgres instance!
 === RUN   TestExample
 page 0:
   header: {LSN:0 Checksum:0 Flags:0 Lower:36 Upper:8072 Special:8192 PageSizeVersion:8196 PruneXid:0}:

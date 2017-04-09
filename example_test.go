@@ -1,3 +1,8 @@
+// Hi there. Below is some toy code that I've written to improve my
+// understanding of how postgres stores and accesses data. You might enjoy
+// reading it along with the other code in this repostiory. Or you can start
+// with the README to get a more verbose overview of this project :).
+
 package gopg
 
 import (
@@ -132,7 +137,7 @@ FROM generate_series(1, 3) i;
 			fmt.Printf("    data: %x\n", tuple.Data())
 
 			// This was fun to implement, and has given me a better intuition for the
-			// kind of stuff that is going on inside of postgres when performining a
+			// kind of stuff that is going on inside of postgres when performing a
 			// `SELECT * FROM foo` query on a table. Obviously there is a lot more to
 			// it, and perhaps I'll end up implementing some additional features :).
 		}
