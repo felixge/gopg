@@ -88,7 +88,11 @@ FROM generate_series(1, 3) i;
 			t.Fatal(err)
 		}
 
-		// Extract the header data from the page.
+		// Extract the header data from the page. You might find the API a bit
+		// overkill at this point, and perhaps I should have simply converted the
+		// whole page into a Go tree data structure to keep things simple. But I
+		// decided to keep the API verbose to highlight the individual steps that
+		// are taken for educational purpose.
 		pageHeader, err := page.Header()
 		if err != nil {
 			t.Fatal(err)
