@@ -130,6 +130,11 @@ FROM generate_series(1, 3) i;
 			fmt.Printf("    item identifier: %+v\n", itemIdentifier)
 			fmt.Printf("    tuple header: %+v\n", tuple)
 			fmt.Printf("    data: %x\n", tuple.Data())
+
+			// This was fun to implement, and has given me a better intuition for the
+			// kind of stuff that is going on inside of postgres when performining a
+			// `SELECT * FROM foo` query on a table. Obviously there is a lot more to
+			// it, and perhaps I'll end up implementing some additional features :).
 		}
 	}
 }
